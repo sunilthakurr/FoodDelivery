@@ -1,10 +1,4 @@
-
-global.foodData = require('./db')(function call(err, data, CatData) {
-  // console.log(data)
-  if(err) console.log(err);
-  global.foodData = data;
-  global.foodCategory = CatData;
-})
+ 
 
 const express = require('express')
 const app = express()
@@ -19,13 +13,27 @@ app.use((req, res, next) => {
 });
 app.use(express.json())
 
-app.get('/', (req, res) => {
-  res.send('Hello World!')
-})
+ 
 
 app.use('/api/auth', require('./Routes/Auth'));
 
-app.listen(port, () => {
-  console.log(`Example app listening on http://localhost:${port}`)
-})
+// app.listen(port, () => {
+//   console.log(`Example app listening on http://localhost:${port}`)
+// })
 
+const initializeDatabase = require('./db');
+
+// Initialize the database and start the server
+initializeDatabase(function(err, data, CatData) {
+  if (err) {
+    console.log(err);
+  } else {
+    global.foodData = data;
+    global.foodCategory = CatData;
+
+    // You can now start the server after initializing the database
+    app.listen(port, () => {
+      console.log(`Example app listening on http://localhost:${port}`);
+    });
+  }
+});
