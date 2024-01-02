@@ -1,7 +1,8 @@
 const mongoose = require('mongoose')
 // const mongoDbClient = require("mongodb").MongoClient
 // const mongoURI = 'mongodb+srv://harshikasaxena2206:18Aq6Dd7p9fcrDUq@cluster0.okz33y1.mongodb.net/'
- const mongoURI = "mongodb+srv://harshikasaxena2206:18Aq6Dd7p9fcrDUq@cluster0.okz33y1.mongodb.net/gofoodmern";
+//  const mongoURI = "mongodb+srv://harshikasaxena2206:18Aq6Dd7p9fcrDUq@cluster0.okz33y1.mongodb.net/gofoodmern";
+ const mongoURI = "mongodb+srv://sunilthakurkv:qnZKamsomXAnfSUN@cluster0.qqm97ia.mongodb.net/GoFoodApp";
 //const mongoURI = "mongodb://harshikasaxena2206:18Aq6Dd7p9fcrDUq@merncluster-shard-00-00.d1d4z.mongodb.net:27017,merncluster-shard-00-01.d1d4z.mongodb.net:27017,merncluster-shard-00-02.d1d4z.mongodb.net:27017/gofoodmernssl=true&replicaSet=atlas-eusy5p-shard-0&authSource=admin&retryWrites=true&w=majority";
 
  
